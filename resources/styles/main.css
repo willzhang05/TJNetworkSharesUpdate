@@ -1,0 +1,240 @@
+@font-face {
+	font-family: Roboto;
+	src: url('../fonts/roboto/Roboto-Regular.ttf')
+ }
+@font-face {
+	font-family: Roboto;
+	font-weight: bold;
+	src: url('../fonts/roboto/Roboto-Bold.ttf')
+ }
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    font: inherit;
+    font-family: Roboto, Helvetica Neue, Helvetica, sans-serif;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    border: 0
+}
+body {
+    overflow-x: hidden;
+    width: 100%;
+    height: 100vh;
+    min-height: 300px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-touch-callout: none
+}
+span {
+    display: block;
+}
+#wrapper {
+    position: relative;
+    float: left;
+    overflow: hidden;
+    width: 100%;
+    min-height: 100%;
+    display: block;
+    background-color: #f2f2f4
+}
+a {
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -ms-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
+    text-decoration: none
+}
+button {
+    background-color: #eee;
+    font-family: Roboto, Helvetica Neue, Helvetica, sans-serif;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -ms-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
+    border: none;
+    outline: 0
+}
+.menu-buttons {
+    font-size: 16px;
+    width: 100%;
+    height: 75px;
+    background-color: #eee
+}
+.menu-buttons:hover {
+    background-color: #e0e0e0
+}
+.menu-buttons:active {
+    background-color: #bdbdbd
+}
+.resource-buttons {
+    padding: 15px;
+    display: inline-block;
+    border-radius: 2.5px;
+}
+.resource-buttons:hover {
+    background-color: #e0e0e0
+}
+.resource-buttons:active {
+    background-color: #bdbdbd
+}
+.toggle-buttons {
+    width: 40px;
+    height: 40px;
+    margin: 4px;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: #3C76A1;
+    background-image: url('../images/ic_menu_black_48dp.png');
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.toggle-buttons:active {
+    background-color: #2e5b7c
+}
+.toggle-background {
+    width: 48px;
+    height: 48px;
+    float: left;
+}
+#menu-toggle-button {
+    background-image: url('../images/ic_menu_black_48dp.png');
+}
+#menu {
+    position: fixed;
+    width: 100%;
+    height: 48px;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -ms-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
+    vertical-align: middle;
+    z-index: 100;
+    background-color: #3C76A1;
+    -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+#name {
+    width: calc(100% - 68px);
+    height: 28px;
+    float: left;
+    padding: 10px;
+    margin-left: -18px;
+    text-align: center;
+    font-size: 25px;
+    color: #eee;
+}
+#sidebar-wrapper {
+    width: 200px;
+    float: left;
+    height: 100%;
+    display: block;
+    position: fixed;
+    left: -200px;
+    z-index: 101;
+    -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    -moz-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    background-color: #eee;
+}
+#sidebar {
+    width: 200px;
+    height: 100%;
+    background-color: #eee;
+}
+#content-wrapper {
+    position: relative;
+    width: 100%;
+    height: calc(100% - 48px);
+    min-height: 575px;
+    margin-top: 48px;
+    margin-bottom: 75px;
+    text-align: center;
+}
+#content {
+    min-height: calc(100% - 48px);
+    font-size: 20px;
+    text-align: left;
+}
+#footer-wrapper {
+    position: absolute;
+    top: calc(100% - 75px);
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 75px;
+    background-color: #757575;
+    -webkit-box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .16), 0 2px 5px 0 rgba(0, 0, 0, .26);
+    -moz-box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .16), 0 2px 5px 0 rgba(0, 0, 0, .26);
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .16), 0 2px 5px 0 rgba(0, 0, 0, .26)
+}
+#footer {
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    text-align: center;
+    font-size: 14px;
+}
+.card {
+    width: calc(100% - 45px);
+    min-height: 50px;
+    margin: 10px 7.5px 0px 7.5px;
+    padding: 15px;
+    float: left;
+    background-color: #eee;
+    font-size: 14px;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -ms-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+.card:hover {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+#m-drives {
+    padding: 5px;
+    border-bottom: 1px solid #bdbdbd;
+    text-align: center;
+}
+#other-resources {
+    padding: 5px;
+    border-bottom: 1px solid #bdbdbd;
+    text-align: center;
+}
+#upload-files {
+    padding: 5px;
+    text-align: center;
+}
+#curators {
+    width: 100%;
+    color: #fff;
+}
+#last-modified {
+    width: 100%;
+    color: #000;
+}
