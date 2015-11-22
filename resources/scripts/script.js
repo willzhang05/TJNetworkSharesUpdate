@@ -31,7 +31,7 @@ $(function() {
         }, 'fast');
 		toggled = true;
     });
-	$("body > *").not("#sidebar-wrapper, #sidebar, #menu-buttons").mouseup(function() {
+	$("body > *").not("#sidebar-wrapper, #sidebar, #menu-buttons").mousedown(function() {
 		if(toggled) {
 			$("#sidebar-wrapper").animate({
 				left: '-=200'
