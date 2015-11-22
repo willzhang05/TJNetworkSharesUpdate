@@ -1,5 +1,6 @@
-var w = $(window).width();	
-var dynWidth = 1366;
+var w = $(window).width(),
+	dynWidth = 1366,
+	toggled = false;
 if(w > dynWidth){
 	$("#sidebar-wrapper").css("left", "0");
 	$("#wrapper").css("left", "200px");
@@ -26,12 +27,16 @@ $(window).resize(function() {
 $(function() {
     $("#menu-toggle-button").click(function() {
         $("#sidebar-wrapper").animate({
-            left: '0'
+            left: '+=200'
         }, 'fast');
+		toggled = true;
     });
-    $("#menu-toggle-button").focusout(function() {
-        $("#sidebar-wrapper").animate({
-            left: '-=200'
-        }, 'fast');
-    });
+	$("body > *").not("#sidebar-wrapper, #sidebar, #menu-buttons").mouseup(function() {
+		if(toggled) {
+			$("#sidebar-wrapper").animate({
+				left: '-=200'
+			}, 'fast');
+			toggled = false;
+		}
+	});
 });
