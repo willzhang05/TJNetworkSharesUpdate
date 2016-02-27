@@ -118,6 +118,7 @@ button {
 }
 #menu-toggle-button {
     background-image: url('../images/ic_menu_black_48dp.png');
+    background-image: url('../images/ic_menu_black_48px.svg');
 }
 #menu {
     position: fixed;
@@ -131,9 +132,9 @@ button {
     vertical-align: middle;
     z-index: 100;
     background-color: #3C76A1;
-    -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-    -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    -webkit-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    -moz-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)
 }
 #name {
     width: calc(100% - 68px);
