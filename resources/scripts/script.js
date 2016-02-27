@@ -3,23 +3,22 @@ var w = $(window).width(),
 	toggled = false;
 if(w > dynWidth){
 	$("#sidebar-wrapper").css("left", "0");
-	$("#wrapper").css("left", "200px");
-	$("#wrapper").css("width", "calc(100% - 200px)");
+	$("#wrapper").css({"left":"200px", "width":"calc(100% - 200px)"});
 	$(".toggle-background").hide();
 	$("#name").css("width", "calc(100% - 200px)");
 }
 $(window).resize(function() {
 	w = $(window).width();
+    toggled = false;
+    $("#sidebar-wrapper").css("left", "0");
 	if(w > dynWidth){
 		$("#sidebar-wrapper").css("left", "0");
-		$("#wrapper").css("left", "200px");
-		$("#wrapper").css("width", "calc(100% - 200px)");
+		$("#wrapper").css({"left":"200px", "width":"calc(100% - 200px)"});
 		$(".toggle-background").hide();
 		$("#name").css("width", "calc(100% - 200px)");
 	} else if(w <= dynWidth){
 		$("#sidebar-wrapper").css("left", "-=200");
-		$("#wrapper").css("left", "0");
-		$("#wrapper").css("width", "100%");
+		$("#wrapper").css({"left":"0", "width":"100%"});
 		$("#name").css("width", "calc(100% - 68px)");
 		$(".toggle-background").show();
 	}
